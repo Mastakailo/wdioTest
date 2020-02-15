@@ -71,7 +71,7 @@ describe('Register page', () => {
     });
 
     it('should click submit B', () => {
-        const element = $('form button[type="Submit"]');
+        const element = $(pageRegisterSelectors.submitButtom);
         element.click();
         browser.pause(1000)
     });

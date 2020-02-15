@@ -21,7 +21,7 @@ const URL = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const URL_GROUP = `{HOST}/group`;
 const pageRegister = {
-    title : 'Progress Monitor',
+     title : 'Progress Monitor',
     h1 : 'User Register',
     description : 'Profiles with fictitious or dummy data will be deleted.',
     buttonText : 'Submit',
@@ -46,6 +46,16 @@ const pageRegisterSelectors = {
     goalsInput : 'form textarea[name="goals"]',
     englishLevelInput : 'form select[name="englishLevel"]',
 };
+const dayReport = {
+    moraleInfo : 'I am ok !',
+    howManyHours : '4',
+    howWasDay : 'It is miracle,it is working!',
+};
+const dayRepotrCelectors = {
+    morale : 'form select[name="morale"]',
+    hours : 'form input[name="hours"]',
+    description :'text input[name="description"]',
 
-module.exports = {URL , URL_LOGIN,user,userAdmin,pageLogin,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+};
+module.exports = {URL ,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 
