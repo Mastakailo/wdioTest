@@ -41,13 +41,14 @@ describe('Login page', () => {
 
 describe('Group page', () => {
     before(() => {
-        browser.url(URL_GROUP)
+        // browser.url(URL_GROUP)
     });
 
-    // it('should click Group Button', () => {
-    //     const element = $('form button[type="Group"]');
-    //     element.click();
-    // });
+    it('should click Group Button', () => {
+        const element = $('ul a[href="/group"]');
+        element.click();
+        browser.pause(4000)
+    });
 
     it('should have the right title', () => {
         const actualH1text = $('h1').getText();
@@ -55,12 +56,12 @@ describe('Group page', () => {
         expect(actualH1text).equal(expectedTitle);
     })
 
-    it('should click New Group Button', () => {
-        const element = $('div[form-group]a[qa="create-group-button"]');
-        element.click();
+    // it('should click New Group Button', () => {
+    //     const element = $('div[form-group]a[qa="create-group-button"]');
+    //     element.click();
         //<a class="btn btn-secondary" qa="create-group-button" href="/group/create">Create new Group</a>
         // div[@id="site-menu"]//a[@qa="cards-link"]'
 
-    });
+
 });
 

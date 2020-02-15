@@ -26,7 +26,7 @@ const pageRegister = {
     description : 'Profiles with fictitious or dummy data will be deleted.',
     buttonText : 'Submit',
 };
-const pageLogin = {
+const pageLoginText = {
     title : 'Progress Monitor',
     h1 : 'User Login',
 };
@@ -54,8 +54,8 @@ const dayReport = {
 const dayRepotrCelectors = {
     morale : 'form select[name="morale"]',
     hours : 'form input[name="hours"]',
-    description :'text input[name="description"]',
+    description :'form textarea[name="description"]',
 
 };
-module.exports = {URL ,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+module.exports = {URL ,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 

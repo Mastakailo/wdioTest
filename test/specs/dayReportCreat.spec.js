@@ -8,20 +8,17 @@ describe('CREATE DAY REPORT', () => {
         $('form input[name="password"]').setValue(userAdmin.password);
         $('form button[type="submit"]').click();
             browser.pause(2000)
-
-
         });
+
     it('should have the right title', () => {
         browser.url( '//stage.pasv.us/diary/create');
         browser.pause(2000)
-
     })
 
-    //  it('should click login Button', () => {
-    //     const element = $('form button[type="submit"]');
-    //     element.click();
-    //     browser.pause(2000);
-    // });
+     it('should click login Button', () => {
+       $('div input[id="input-0"]').click();
+        browser.pause(2000);
+    });
 
     it('it should choose Morale dropdown', () => {
        $(dayRepotrCelectors.morale).selectByVisibleText('9');
@@ -30,6 +27,7 @@ describe('CREATE DAY REPORT', () => {
     it('should fill hours field ', () => {
         $(dayRepotrCelectors.hours).setValue(dayReport.howManyHours);
     });
+
     it('should fill how was your day field ', () => {
         $(dayRepotrCelectors.description).setValue(dayReport.howWasDay);
         browser.pause(5000)
