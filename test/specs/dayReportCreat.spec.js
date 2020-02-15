@@ -14,6 +14,10 @@ describe('CREATE DAY REPORT', () => {
         browser.url( '//stage.pasv.us/diary/create');
         browser.pause(2000)
     })
+    it('should have the right title', () => {
+        browser.url( '//stage.pasv.us/diary/create');
+        browser.pause(2000)
+    })
 
      it('should click login Button', () => {
        $('div input[id="input-0"]').click();
