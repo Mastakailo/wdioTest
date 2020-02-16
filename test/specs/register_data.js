@@ -49,13 +49,29 @@ const pageRegisterSelectors = {
 const dayReport = {
     moraleInfo : 'I am ok !',
     howManyHours : '4',
-    howWasDay : 'It is miracle,it is working!',
+    howWasDay : 'It is miracle,it is working! But like always i forgot smal detayl , I need use more symbols !  ',
+};
+const newGroupInfo = {
+    name : 'Ev company',
+    description : 'the best man in the world !',
+    accsesType : 'Members',
+}
+const newGproupSelectors = {
+    groupButtom : 'li a[href="/group"]',
+    newGproupButtom : 'div a[href="/group/create"]',
+    inputGroupName : 'form input[name="name"]',
+    accsesTypeSelector :'div select[name="accessType"]',
+    descriptionGroup : 'div input[name="description"]',
+    createButton : 'div button[type="submit"]'
 };
 const dayRepotrCelectors = {
+    dayReportButtom : 'li a[href="/diary"]',
+    newDayReport : 'div a[class="btn btn-secondary"]',
+    iNeedHelp : 'div input[id="input-0"]',
     morale : 'form select[name="morale"]',
     hours : 'form input[name="hours"]',
     description :'form textarea[name="description"]',
 
 };
-module.exports = {URL ,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+module.exports = {URL,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 

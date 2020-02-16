@@ -1,12 +1,12 @@
-const  {userAdmin, URL_LOGIN,} = require ('./register_data');
+const  {userAdmin, URL_LOGIN,pageRegisterSelectors,} = require ('./register_data');
 
 
-describe('CREATE DAY REPORT', () => {
+describe('CREATE NEW GROUP', () => {
     before('Login as admin', () => {
         browser.url(URL_LOGIN);
-        $('form input[name="email"]').setValue(userAdmin.email);
-        $('form input[name="password"]').setValue(userAdmin.password);
-        $('form button[type="submit"]').click();
+        $(pageRegisterSelectors.emailInput).setValue(userAdmin.email);
+        $(pageRegisterSelectors.passwordInput).setValue(userAdmin.password);
+        $(pageRegisterSelectors.submitButtom).click();
         browser.pause(2000);
     });
 
@@ -14,4 +14,9 @@ describe('CREATE DAY REPORT', () => {
         browser.url( 'https://stage.pasv.us/group/create');
         browser.pause(2000)
     })
+
+
+
+
+
 });
