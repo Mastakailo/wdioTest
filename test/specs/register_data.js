@@ -8,6 +8,22 @@ const user = {
     goals : 'eat sleep code',
     language : 'Native',
 };
+const newUserSelectors = {
+    userButton : '//a[starts-with(@href,"/user")]',
+    name : '//*[@name="name"]',
+    email : '//*[@name="email"]',
+    phone : '//*[@name="phone"]',
+    groupField :  '//*[@class=" css-1hwfws3"]',
+    groupFieldFilll :  '//*[@class="css-1g6gooi"]',
+    roleButton : '//*[@class="css-1hwfws3"]'
+};//a[starts-with(@href, '/')]
+const newUserInfo = {
+    name : 'Neo',
+    email : Math.random()+'test@yahoo.com',
+    phone : '123456789',
+    group : 'Ev company"]',
+    roles : 'quiz',
+};
 const HOST = '//stage.pasv.us'
 const userAdmin = {
     password : 5233279,
@@ -20,6 +36,16 @@ const pageGROUP = {
 const URL = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const URL_GROUP = `{HOST}/group`;
+const flashCardsSelectors = {
+    topCardsButton : '//div[@id="site-menu"]//a[starts-with(@href,"/flash")]',
+    createNewFlashCardsButton : '//button[@qa="flash-create-new-group"]',
+    sidePanelTitle : '//div[contains(@class,"sidepanel")]//*[@class="modal-title"]',
+    sidePanel : '//div[contains(@class,"sidepanel")]',
+    newCardinputName : '//div[contains(@class,"sidepanel")]//input[@name="name"]',
+    newCardinputDecsription : '//div[contains(@class,"sidepanel")]//input[@name="description"]',
+    createButtonSubbmit : '//div[contains(@class,"sidepanel")]//button[@type="submit"]',
+    newCardTittle : '//div[@qa="flash-group-list "]//h4/a',
+};
 const pageRegister = {
      title : 'Progress Monitor',
     h1 : 'User Register',
@@ -56,6 +82,10 @@ const newGroupInfo = {
     description : 'the best man in the world !',
     accsesType : 'Members',
 }
+const newCourseSelectors = {
+    courseButtom : 'li a[href="/course"]',
+    createNewGroupButton : 'div a[class="btn btn-primary"]',
+};
 const newGproupSelectors = {
     groupButtom : 'li a[href="/group"]',
     newGproupButtom : 'div a[href="/group/create"]',
@@ -71,7 +101,7 @@ const dayRepotrCelectors = {
     morale : 'form select[name="morale"]',
     hours : 'form input[name="hours"]',
     description :'form textarea[name="description"]',
-
+    confirmationWindows : '.notification notification-success notification-visible h4[class="notification-title"]'
 };
-module.exports = {URL,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+module.exports = {URL,flashCardsSelectors,newUserInfo,newUserSelectors,newCourseSelectors,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 

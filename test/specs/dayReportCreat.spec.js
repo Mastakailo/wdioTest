@@ -37,10 +37,5 @@ describe('CREATE DAY REPORT', () => {
 
         });
 
-        // it('should click Save ', () => {
-        //     $(pageRegisterSelectors.submitButtom).click();
-        //     browser.pause(2000);
-        // });
-
 });
 
