@@ -7,6 +7,10 @@ const user = {
     about : 'da dad da ad',
     goals : 'eat sleep code',
     language : 'Native',
+
+};const userStudent = {
+    password : 5233279,
+    email : 'mastakailo@list.ru',
 };
 const newUserSelectors = {
     userButton : '//a[starts-with(@href,"/user")]',
@@ -71,8 +75,11 @@ const pageRegisterSelectors = {
     aboutInput : 'form textarea[name="about"]',
     goalsInput : 'form textarea[name="goals"]',
     englishLevelInput : 'form select[name="englishLevel"]',
+    logOutButton : '//a[@class="dropdown-toggle nav-link"]',
+    logOut : '//button[contains(text(),"Logout")]',
 };
 const dayReport = {
+
     moraleInfo : 'I am ok !',
     howManyHours : '4',
     howWasDay : 'It is miracle,it is working! But like always i forgot smal detayl , I need use more symbols !  ',
@@ -95,13 +102,17 @@ const newGproupSelectors = {
     createButton : 'div button[type="submit"]'
 };
 const dayRepotrCelectors = {
+    h1 : 'Daily reports',
     dayReportButtom : 'li a[href="/diary"]',
     newDayReport : 'div a[class="btn btn-secondary"]',
     iNeedHelp : 'div input[id="input-0"]',
     morale : 'form select[name="morale"]',
     hours : 'form input[name="hours"]',
     description :'form textarea[name="description"]',
-    confirmationWindows : '.notification notification-success notification-visible h4[class="notification-title"]'
+    approveButton : '//button[@qa="approve-button"]',
+    submitButton : '//button[@type="submit"]',
+    confirmationWindows : 'notification notification-success notification-visible h4[class="notification-title"]',
 };
-module.exports = {URL,flashCardsSelectors,newUserInfo,newUserSelectors,newCourseSelectors,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLogin: pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+
+module.exports = {URL,userStudent,pageLoginText,flashCardsSelectors,newUserInfo,newUserSelectors,newCourseSelectors,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 

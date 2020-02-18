@@ -1,4 +1,4 @@
-const  {userAdmin, URL_LOGIN,pageRegisterSelectors,newGroupInfo,newGproupSelectors} = require ('./register_data');
+const  {userAdmin, URL_LOGIN,pageRegisterSelectors,newGroupInfo,newGproupSelectors} = require ('../register_data');
 
 const {expect} = require ('chai');
 

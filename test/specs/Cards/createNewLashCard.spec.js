@@ -1,4 +1,4 @@
-const  {userAdmin,newUserInfo,flashCardsSelectors,URL_LOGIN,newUserSelectors,newCourseSelectors,pageRegisterSelectors,newGroupInfo,newGproupSelectors} = require ('./register_data');
+const  {userAdmin,newUserInfo,flashCardsSelectors,URL_LOGIN,newUserSelectors,newCourseSelectors,pageRegisterSelectors,newGroupInfo,newGproupSelectors} = require ('../register_data');
 
 const {expect} = require ('chai');
 
@@ -60,7 +60,7 @@ describe('FLASH GRUOP CREATE', () => {
     });
 
     it('should have proof tittle ', function () {
-        const title = $('//h1').getText();
+        const title = browser.$('//h1').getText();``
         const expectedText = newGroupInfo.name;
         expect(title).eq(expectedText);
     });

@@ -1,21 +1,26 @@
-const  {URL ,userAdmin, URL_LOGIN,user,pageRegister,pageLogin,pageGROUP,URL_GROUP,pageRegisterSelectors} = require ('./register_data');
+const  {URL ,userAdmin, URL_LOGIN,user,dayRepotrCelectors,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors} = require ('./register_data');
 
 const {expect} = require ('chai');
 
 describe('Login page', () => {
     before(() => {
-        browser.url(URL_LOGIN)
+        browser.url(URL_LOGIN);
+
     });
+
+    after('After ',()=>{
+        browser.pause(3000);
+    })
 
     it('should have the right title', () => {
         const actualTitle = browser.getTitle();
-        const expectedTitle = pageLogin.title;
+        const expectedTitle = pageLoginText.title;
         expect(actualTitle).equal(expectedTitle);
     })
 
     it('it should have right h1', () => {
         const actualH1text = $('h1').getText();
-        const expectedH1text = pageLogin.h1;
+        const expectedH1text = pageLoginText.h1;
         expect(actualH1text).equal(expectedH1text);
     })
 
@@ -37,23 +42,21 @@ describe('Login page', () => {
         browser.pause(2000);
     });
 });
-
-
 describe('Group page', () => {
     before(() => {
         // browser.url(URL_GROUP)
     });
 
-    it('should click Group Button', () => {
-        const element = $('ul a[href="/group"]');
+    it('should click Diary Button', () => {
+        const element = $('ul a[href="/diary"]');
         element.click();
-        browser.pause(4000)
     });
 
     it('should have the right title', () => {
         const actualH1text = $('h1').getText();
-        const expectedTitle = pageGROUP.h1;
+        const expectedTitle = dayRepotrCelectors.h1;
         expect(actualH1text).equal(expectedTitle);
+browser.pause(2000);
     })
 
     // it('should click New Group Button', () => {
@@ -64,4 +67,6 @@ describe('Group page', () => {
 
 
 });
+
+
 
