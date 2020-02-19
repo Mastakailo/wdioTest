@@ -114,5 +114,5 @@ const dayRepotrCelectors = {
     confirmationWindows : 'notification notification-success notification-visible h4[class="notification-title"]',
 };
 
-module.exports = {URL,userStudent,pageLoginText,flashCardsSelectors,newUserInfo,newUserSelectors,newCourseSelectors,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
+module.exports = {URL,userStudent,pageLoginText,flashCardsSelectors,newUserInfo,newUserSelectors,newCourseSelectors,newGproupSelectors,newGroupInfo, newGproupSelectors,pageConfirmation,dayReport,dayRepotrSelectors: dayRepotrCelectors, URL_LOGIN,user,userAdmin,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors,pageRegister} ;
 

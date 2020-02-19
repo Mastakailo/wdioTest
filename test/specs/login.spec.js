@@ -1,4 +1,4 @@
-const  {URL ,userAdmin, URL_LOGIN,user,dayRepotrCelectors,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors} = require ('./register_data');
+const  {URL ,userAdmin, URL_LOGIN,user,dayRepotrSelectors,pageLoginText,pageGROUP,URL_GROUP,pageRegisterSelectors} = require ('./register_data');
 
 const {expect} = require ('chai');
 
@@ -54,7 +54,7 @@ describe('Group page', () => {
 
     it('should have the right title', () => {
         const actualH1text = $('h1').getText();
-        const expectedTitle = dayRepotrCelectors.h1;
+        const expectedTitle = dayRepotrSelectors.h1;
         expect(actualH1text).equal(expectedTitle);
 browser.pause(2000);
     })

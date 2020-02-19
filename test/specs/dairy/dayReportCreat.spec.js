@@ -1,4 +1,4 @@
-const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrCelectors,dayReport} = require ('../register_data');
+const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrSelectors,dayReport} = require ('../register_data');
 
 const  {loginAsAdmin,logOutAsAdmin} = require('../actions');
 
@@ -14,33 +14,33 @@ describe ('Login & logOut',()=> {
     });
 
     it('should click  diary', () => {
-        $(dayRepotrCelectors.dayReportButtom).click();
+        $(dayRepotrSelectors.dayReportButtom).click();
         browser.pause(2000);
     });
 
     it('should click new day report ', () => {
-        $(dayRepotrCelectors.newDayReport).click();
+        $(dayRepotrSelectors.newDayReport).click();
         browser.pause(2000);
     });
 
     it('should click "I need help" ', () => {
-        $(dayRepotrCelectors.iNeedHelp).click();
+        $(dayRepotrSelectors.iNeedHelp).click();
 
     });
 
     it('it should choose Morale dropdown', () => {
-        $(dayRepotrCelectors.morale).selectByVisibleText('9');
+        $(dayRepotrSelectors.morale).selectByVisibleText('9');
     });
 
     it('should fill hours field ', () => {
-        $(dayRepotrCelectors.hours).setValue(dayReport.howManyHours);
+        $(dayRepotrSelectors.hours).setValue(dayReport.howManyHours);
     });
 
     it('should fill how was your day field ', () => {
-        $(dayRepotrCelectors.description).setValue(dayReport.howWasDay);
+        $(dayRepotrSelectors.description).setValue(dayReport.howWasDay);
     });
     //      it('should submit DR', () => {
-    //     $(dayRepotrCelectors.submitButton).click();
+    //     $(dayRepotrSelectors.submitButton).click();
     //     browser.pause(1500);
     // });
 });

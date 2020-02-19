@@ -1,4 +1,4 @@
-const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrCelectors,dayReport} = require ('./register_data');
+const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrSelectors,dayReport} = require ('./register_data');
 
 function loginAsAdmin () {
             browser.url('//stage.pasv.us/user/login');

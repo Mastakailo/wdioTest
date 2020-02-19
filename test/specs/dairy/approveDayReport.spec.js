@@ -1,4 +1,4 @@
-const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrCelectors} = require ('../register_data');
+const  {userAdmin, URL_LOGIN,pageRegisterSelectors,dayRepotrSelectors} = require ('../register_data');
 const {loginAsAdmin,logOutAsAdmin} = require('../actions');
 
 
@@ -14,11 +14,11 @@ describe ('Login & logOut',()=>{
     });
 
     it('should click  diary', () => {
-        $(dayRepotrCelectors.dayReportButtom).click();
+        $(dayRepotrSelectors.dayReportButtom).click();
     });
 
     it('should approve diary', () => {
-        $(dayRepotrCelectors.approveButton).click();
+        $(dayRepotrSelectors.approveButton).click();
         browser.pause(1500);
     });
 
